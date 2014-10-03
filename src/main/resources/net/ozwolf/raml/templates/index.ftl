@@ -4,7 +4,7 @@
 <head>
     <title>${model.title?html} (v${model.version?html})</title>
     <link rel="stylesheet" type="text/css" href="/api/assets/css/raml-docs-base.css"/>
-    <link rel="stylesheet" type="text/css" href="/api/assets/css/raml-docs-compiled.css"/>
+    <link rel="stylesheet" type="text/css" href="/api/assets/css/raml-docs.css"/>
 
     [#if model.hasStylesheets()]
         [#list model.stylesheets as stylesheet]
@@ -277,11 +277,16 @@
         </div>
         <h5>Example</h5>
         [#if response.example??]
+            <div class="toggle-schema-example">
+                <a href="javascirpt: toggleItemVisibility('endpoint-${resourceId}-${action.type}-response-${response.code}-${response.id}-example')">View</a>
+            </div>
+            <div id="endpoint-${resourceId}-${action.type}-response-${response.code}-${response.id}-example" style="display: none;">
             [#if response.json]
                 <pre class="prettyprint lang-json">${response.example}</pre>
             [#else]
                 <code>${response.example}</code>
             [/#if]
+            </div>
         [#else]
             <p class="alert">
                 No <code>example</code> provided.
@@ -289,11 +294,16 @@
         [/#if]
         <h5>Schema</h5>
         [#if response.schema??]
+            <div class="toggle-schema-example">
+                <a href="javascirpt: toggleItemVisibility('endpoint-${resourceId}-${action.type}-response-${response.code}-${response.id}-schema')">View</a>
+            </div>
+            <div id="endpoint-${resourceId}-${action.type}-response-${response.code}-${response.id}-schema" style="display: none;">
             [#if response.json]
                 <pre class="prettyprint lang-json">${response.schema}</pre>
             [#else]
                 <code>${response.schema}</code>
             [/#if]
+            </div>
         [#else]
             <p class="alert">
                 No <code>schema</code> provided.
