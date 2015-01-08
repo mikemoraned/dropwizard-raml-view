@@ -1,4 +1,4 @@
-<span style="color:red; font-size: 40pt;">END OF LIFE</span>
+# !!!END OF LIFE!!!
 
 # DropWizard RAML API Resource Bundle
 
