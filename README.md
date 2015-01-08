@@ -1,3 +1,5 @@
+# <span style="color:red">`END OF LIFE`</span>
+
 # DropWizard RAML API Resource Bundle
 
 This bundle allows a RAML specification to be attached to the resources of the service, exposing a human-readable, HTML representation of the RAML specification on the `/api` resource.
