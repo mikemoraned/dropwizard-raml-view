@@ -1,3 +1,5 @@
+# --- MAINTENANCE MODE ---
+
 # DropWizard RAML API Resource Bundle
 
 This bundle allows a RAML specification to be attached to the resources of the service, exposing a human-readable, HTML representation of the RAML specification on the `/api` resource.
@@ -35,7 +37,7 @@ The following endpoints will be made available on your service:
 To add this bundle to your service and expose a RAML specification under the `/api` resource.
 
 ```java
-bootstrap.addBundle(ApiSpecsBundle.bundle("apispecs/apispecs.raml"));
+bootstrap.addBundle(RamlView.bundle("apispecs/apispecs.raml"));
 ```
 
 ## Functionality Caveat
