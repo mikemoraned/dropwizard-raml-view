@@ -1,4 +1,4 @@
-# <span style="color:red">`END OF LIFE`</span>
+<span style="color:red; font-size: 40pt;">END OF LIFE</span>
 
 # DropWizard RAML API Resource Bundle
 
